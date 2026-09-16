@@ -16,11 +16,17 @@ export type StackGroup = {
   items: string[];
 };
 
+/**
+ * Kept deliberately short. A skills list is skimmed, not read — every extra
+ * pill dilutes the ones that actually carry signal, so this lists what the
+ * work is built on and leaves out library-level detail and techniques that
+ * are implied by the category they sit under.
+ */
 export const STACK: StackGroup[] = [
   {
     label: 'Languages',
     icon: Braces,
-    items: ['Python', 'TypeScript', 'JavaScript', 'SQL', 'C++'],
+    items: ['Python', 'TypeScript', 'SQL'],
   },
   {
     label: 'LLMs & Agents',
@@ -29,31 +35,24 @@ export const STACK: StackGroup[] = [
       'MCP',
       'Claude',
       'GPT',
-      'Gemini',
       'Llama',
       'Ollama',
-      'Together AI',
       'LangChain',
       'CrewAI',
-      'ReAct loops',
       'Function calling',
-      'Prompt engineering',
       'Fine-tuning',
     ],
   },
   {
-    label: 'RAG & Vector',
+    label: 'RAG & Retrieval',
     icon: Layers,
     items: [
       'ChromaDB',
       'FAISS',
       'Pinecone',
       'Sentence Transformers',
-      'Hugging Face',
       'Embeddings',
-      'Chunking',
       'Reranking',
-      'Semantic search',
     ],
   },
   {
@@ -63,57 +62,21 @@ export const STACK: StackGroup[] = [
       'PyTorch',
       'TensorFlow',
       'Scikit-learn',
+      'Hugging Face',
       'Transformers',
       'Pandas',
       'NumPy',
-      'Time-series forecasting',
     ],
   },
   {
     label: 'Backend & Data',
     icon: Database,
-    items: [
-      'FastAPI',
-      'Pydantic v2',
-      'SQLAlchemy',
-      'Celery',
-      'Redis',
-      'WebSockets',
-      'httpx',
-      'Jinja2',
-      'PostgreSQL',
-      'Supabase',
-      'SQLite',
-    ],
+    items: ['FastAPI', 'Pydantic', 'Celery', 'Redis', 'PostgreSQL', 'WebSockets'],
   },
   {
-    label: 'Frontend',
-    icon: MonitorSmartphone,
-    items: [
-      'React 18',
-      'TypeScript',
-      'Vite',
-      'Tailwind CSS',
-      'Framer Motion',
-      'React Flow',
-      'React Query',
-      'React Router',
-      'Zustand',
-    ],
-  },
-  {
-    label: 'Voice & Channels',
+    label: 'Voice & Speech',
     icon: AudioLines,
-    items: [
-      'Whisper',
-      'faster-whisper',
-      'ElevenLabs',
-      'Piper',
-      'Twilio Voice',
-      'Exotel',
-      'WhatsApp Cloud API',
-      'Slack API',
-    ],
+    items: ['Whisper', 'ElevenLabs', 'Twilio Voice', 'WhatsApp API'],
   },
   {
     label: 'Cloud & MLOps',
@@ -122,15 +85,14 @@ export const STACK: StackGroup[] = [
       'AWS SageMaker',
       'Bedrock',
       'Lambda',
-      'S3',
-      'EC2',
-      'IAM',
-      'CloudWatch',
       'Docker',
-      'Railway',
-      'Render',
       'GitHub Actions',
       'Weights & Biases',
     ],
+  },
+  {
+    label: 'Frontend',
+    icon: MonitorSmartphone,
+    items: ['React', 'Tailwind CSS', 'React Flow'],
   },
 ];
