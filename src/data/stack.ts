@@ -1,4 +1,5 @@
 import {
+  Bot,
   Boxes,
   Braces,
   Brain,
@@ -6,7 +7,6 @@ import {
   Database,
   Layers,
   MonitorSmartphone,
-  AudioLines,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -29,17 +29,29 @@ export const STACK: StackGroup[] = [
     items: ['Python', 'TypeScript', 'SQL'],
   },
   {
-    label: 'LLMs & Agents',
+    label: 'Agentic AI',
+    icon: Bot,
+    items: [
+      'Agentic workflows',
+      'Multi-agent systems',
+      'MCP',
+      'Tool calling',
+      'ReAct loops',
+      'CrewAI',
+      'Human-in-the-loop',
+      'Model routing',
+    ],
+  },
+  {
+    label: 'LLMs',
     icon: Brain,
     items: [
-      'MCP',
       'Claude',
       'GPT',
       'Llama',
       'Ollama',
       'LangChain',
-      'CrewAI',
-      'Function calling',
+      'Structured outputs',
       'Fine-tuning',
     ],
   },
@@ -71,12 +83,15 @@ export const STACK: StackGroup[] = [
   {
     label: 'Backend & Data',
     icon: Database,
-    items: ['FastAPI', 'Pydantic', 'Celery', 'Redis', 'PostgreSQL', 'WebSockets'],
-  },
-  {
-    label: 'Voice & Speech',
-    icon: AudioLines,
-    items: ['Whisper', 'ElevenLabs', 'Twilio Voice', 'WhatsApp API'],
+    items: [
+      'FastAPI',
+      'Pydantic',
+      'Celery',
+      'Redis',
+      'PostgreSQL',
+      'WebSockets',
+      'SSE streaming',
+    ],
   },
   {
     label: 'Cloud & MLOps',
@@ -88,6 +103,7 @@ export const STACK: StackGroup[] = [
       'Docker',
       'GitHub Actions',
       'Weights & Biases',
+      'Observability',
     ],
   },
   {
