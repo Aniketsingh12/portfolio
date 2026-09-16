@@ -4,9 +4,9 @@ import {
   Braces,
   Brain,
   Cloud,
-  Database,
   Layers,
   MonitorSmartphone,
+  Server,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -37,20 +37,22 @@ export const STACK: StackGroup[] = [
       'MCP',
       'Tool calling',
       'ReAct loops',
+      'LangChain',
       'CrewAI',
       'Human-in-the-loop',
       'Model routing',
     ],
   },
   {
-    label: 'LLMs',
+    label: 'AI Models',
     icon: Brain,
     items: [
       'Claude',
       'GPT',
       'Llama',
       'Ollama',
-      'LangChain',
+      'Whisper',
+      'ElevenLabs',
       'Structured outputs',
       'Fine-tuning',
     ],
@@ -81,8 +83,8 @@ export const STACK: StackGroup[] = [
     ],
   },
   {
-    label: 'Backend & Data',
-    icon: Database,
+    label: 'Backend & Integrations',
+    icon: Server,
     items: [
       'FastAPI',
       'Pydantic',
@@ -91,6 +93,8 @@ export const STACK: StackGroup[] = [
       'PostgreSQL',
       'WebSockets',
       'SSE streaming',
+      'Twilio',
+      'WhatsApp API',
     ],
   },
   {
