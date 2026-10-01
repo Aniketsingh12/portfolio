@@ -14,7 +14,7 @@ to a voice agent that answers real phone calls.
 | Hero | Name, one-line pitch, portrait with a cursor-following magnetic hover |
 | About | A short scroll-revealed statement of what I do and what I care about |
 | What I Do | Six things I build — chatbots, agents, MCP integrations, voice AI, custom models, and getting it all into production |
-| Projects | Five shipped products, each linking to its source on GitHub (and its live demo, when one is up) |
+| Projects | Five shipped products, each linking to its live deployment |
 | Skills | Eight groups, one competency each — languages, agentic AI, LLM engineering, RAG & retrieval, ML & data science, backend & integrations, cloud & MLOps, frontend |
 | Experience | Roles at Acadally and Radius Synergies |
 | Contact | Email, resume download, and social links |
@@ -101,7 +101,7 @@ All copy is data, not markup — edit these and the page follows, no JSX to touc
 
 | File | Contents |
 |---|---|
-| `src/data/projects.ts` | The five project cards — name, category, blurb, tags, repo, optional live demo |
+| `src/data/projects.ts` | The five project cards — name, category, blurb, tags, live link |
 | `src/data/services.ts` | The six "What I Do" entries |
 | `src/data/stack.ts` | Skills, grouped, each with a Lucide icon |
 | `src/data/experience.ts` | Roles, dates, bullet points |

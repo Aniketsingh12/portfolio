@@ -6,7 +6,7 @@ import {
   useTransform,
   type MotionValue,
 } from 'framer-motion';
-import { ArrowUpRight, Github, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight, type LucideIcon } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 import LiveProjectButton from '../components/LiveProjectButton';
 import { PROJECTS, type Project } from '../data/projects';
@@ -76,16 +76,14 @@ function ProjectCard({ project, index, total, progress }: CardProps) {
             </div>
           </div>
 
-          <div className="hidden shrink-0 flex-col items-end gap-2 sm:flex lg:flex-row">
-            {project.live && <LiveProjectButton href={project.live} />}
-            <LiveProjectButton href={project.repo} label="View Code" icon={Github} />
-          </div>
+          <LiveProjectButton
+            href={project.href}
+            className="hidden shrink-0 sm:inline-flex"
+          />
 
-          <div className="flex shrink-0 gap-2 sm:hidden">
-            {project.live && (
-              <IconLink href={project.live} label={`${project.name} — live project`} icon={ArrowUpRight} />
-            )}
-            <IconLink href={project.repo} label={`${project.name} — source code on GitHub`} icon={Github} />
+          {/* Icon-only fallback so the link is still reachable on phones. */}
+          <div className="shrink-0 sm:hidden">
+            <IconLink href={project.href} label={`${project.name} — live project`} icon={ArrowUpRight} />
           </div>
         </div>
 
