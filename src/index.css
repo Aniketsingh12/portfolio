@@ -40,6 +40,15 @@ body {
   color: #ffffff;
 }
 
+/* One consistent keyboard-focus ring on every link and button, in the site's
+   light accent colour. Specificity is a single class (the :where() part counts
+   zero; :focus-visible counts one) and this sits after the Tailwind utilities,
+   so it wins over a component's resting outline while the element has focus. */
+:where(a, button):focus-visible {
+  outline: 2px solid #d7e2ea;
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

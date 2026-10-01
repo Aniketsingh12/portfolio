@@ -20,6 +20,7 @@ export default function HeroSection() {
     // bottom row (tagline + Contact button) never sits under the toolbar.
     // h-screen stays as the fallback for browsers without svh support.
     <section
+      id="top"
       className="relative flex h-screen h-svh flex-col bg-[#0C0C0C]"
       style={{ overflowX: 'clip' }}
     >
