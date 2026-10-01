@@ -17,10 +17,10 @@ export type StackGroup = {
 };
 
 /**
- * Kept deliberately short. A skills list is skimmed, not read — every extra
- * pill dilutes the ones that actually carry signal, so this lists what the
- * work is built on and leaves out library-level detail and techniques that
- * are implied by the category they sit under.
+ * One rule for this list: each card is a single competency, and every pill in
+ * it belongs to that competency — no grab-bags. Items are limited to what the
+ * work has actually used (original portfolio, the five projects, and the
+ * Experience section), and kept short because a skills list is skimmed.
  */
 export const STACK: StackGroup[] = [
   {
@@ -29,30 +29,31 @@ export const STACK: StackGroup[] = [
     items: ['Python', 'TypeScript', 'SQL'],
   },
   {
+    // Patterns first, then the frameworks and protocol that implement them.
     label: 'Agentic AI',
     icon: Bot,
     items: [
       'Agentic workflows',
       'Multi-agent systems',
-      'MCP',
       'Tool calling',
       'ReAct loops',
-      'LangChain',
-      'CrewAI',
       'Human-in-the-loop',
       'Model routing',
+      'MCP',
+      'CrewAI',
+      'LangChain',
     ],
   },
   {
-    label: 'AI Models',
+    // Working with language models: which ones, and how they are driven.
+    label: 'LLM Engineering',
     icon: Brain,
     items: [
       'Claude',
       'GPT',
       'Llama',
       'Ollama',
-      'Whisper',
-      'ElevenLabs',
+      'Prompt engineering',
       'Structured outputs',
       'Fine-tuning',
     ],
@@ -61,40 +62,43 @@ export const STACK: StackGroup[] = [
     label: 'RAG & Retrieval',
     icon: Layers,
     items: [
+      'Embeddings',
+      'Sentence Transformers',
       'ChromaDB',
       'FAISS',
       'Pinecone',
-      'Sentence Transformers',
-      'Embeddings',
       'Reranking',
     ],
   },
   {
-    label: 'ML & Deep Learning',
+    // Trained models and the data tooling around them. Whisper lives here as a
+    // pretrained speech model, alongside the Hugging Face ecosystem it ships in.
+    label: 'ML & Data Science',
     icon: Boxes,
     items: [
       'PyTorch',
       'TensorFlow',
       'Scikit-learn',
       'Hugging Face',
-      'Transformers',
+      'Whisper',
       'Pandas',
       'NumPy',
+      'Time-series forecasting',
     ],
   },
   {
+    // Server-side building blocks, plus the third-party APIs they connect to.
     label: 'Backend & Integrations',
     icon: Server,
     items: [
       'FastAPI',
-      'Pydantic',
-      'Celery',
-      'Redis',
       'PostgreSQL',
-      'WebSockets',
-      'SSE streaming',
+      'Redis',
+      'Celery',
+      'WebSockets & SSE',
       'Twilio',
       'WhatsApp API',
+      'ElevenLabs',
     ],
   },
   {

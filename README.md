@@ -15,7 +15,7 @@ to a voice agent that answers real phone calls.
 | About | A short scroll-revealed statement of what I do and what I care about |
 | What I Do | Six things I build — chatbots, agents, MCP integrations, voice AI, custom models, and getting it all into production |
 | Projects | Five shipped products, each linking to its live deployment |
-| Stack | Everything I work with, grouped — languages, LLMs & agents, RAG, ML, backend, frontend, voice, cloud & MLOps |
+| Skills | Eight groups, one competency each — languages, agentic AI, LLM engineering, RAG & retrieval, ML & data science, backend & integrations, cloud & MLOps, frontend |
 | Experience | Roles at Acadally and Radius Synergies |
 | Contact | Email, resume download, and social links |
 

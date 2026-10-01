@@ -15,7 +15,7 @@ export default function StackSection() {
         className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
-        Stack
+        Skills
       </FadeIn>
 
       <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 sm:gap-5">
