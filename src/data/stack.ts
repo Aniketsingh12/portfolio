@@ -17,87 +17,66 @@ export type StackGroup = {
 };
 
 /**
- * One rule for this list: each card is a single competency, and every pill in
- * it belongs to that competency — no grab-bags. Items are limited to what the
- * work has actually used (original portfolio, the five projects, and the
- * Experience section), and kept short because a skills list is skimmed.
+ * SOURCE OF TRUTH: every item here must appear in the CORE COMPETENCIES or
+ * TECHNICAL SKILLS section of `resume/resume.tex`, or be one Aniket has
+ * explicitly confirmed (CrewAI, fine-tuning). Nothing gets added from project
+ * docs, the legacy site, or inference — a skills list is only worth anything
+ * if every pill can be defended in an interview. Update the resume first,
+ * then this file.
  */
 export const STACK: StackGroup[] = [
   {
     label: 'Languages',
     icon: Braces,
-    items: ['Python', 'TypeScript', 'SQL'],
+    items: ['Python', 'TypeScript', 'SQL', 'C++'],
   },
   {
-    // Patterns first, then the frameworks and protocol that implement them.
     label: 'Agentic AI',
     icon: Bot,
     items: [
-      'Agentic workflows',
-      'Multi-agent systems',
-      'Tool calling',
-      'ReAct loops',
-      'Human-in-the-loop',
-      'Model routing',
+      'Multi-agent orchestration',
+      'ReAct tool calling',
       'MCP',
-      'CrewAI',
       'LangChain',
+      'CrewAI',
     ],
   },
   {
-    // Working with language models: which ones, and how they are driven.
     label: 'LLM Engineering',
     icon: Brain,
-    items: [
-      'Claude',
-      'GPT',
-      'Llama',
-      'Ollama',
-      'Prompt engineering',
-      'Structured outputs',
-      'Fine-tuning',
-    ],
+    items: ['Claude', 'GPT', 'Ollama', 'Together AI', 'Fine-tuning'],
   },
   {
     label: 'RAG & Retrieval',
     icon: Layers,
-    items: [
-      'Embeddings',
-      'Sentence Transformers',
-      'ChromaDB',
-      'FAISS',
-      'Pinecone',
-      'Reranking',
-    ],
+    items: ['ChromaDB', 'FAISS', 'Sentence Transformers'],
   },
   {
-    // Trained models and the data tooling around them. Whisper lives here as a
-    // pretrained speech model, alongside the Hugging Face ecosystem it ships in.
     label: 'ML & Data Science',
     icon: Boxes,
     items: [
       'PyTorch',
       'TensorFlow',
+      'Transformers',
       'Scikit-learn',
-      'Hugging Face',
-      'Whisper',
+      'NLP',
       'Pandas',
       'NumPy',
-      'Time-series forecasting',
     ],
   },
   {
-    // Server-side building blocks, plus the third-party APIs they connect to.
     label: 'Backend & Integrations',
     icon: Server,
     items: [
       'FastAPI',
+      'SQLAlchemy',
       'PostgreSQL',
+      'Supabase',
       'Redis',
       'Celery',
-      'WebSockets & SSE',
+      'WebSockets',
       'Twilio',
-      'WhatsApp API',
+      'Whisper',
       'ElevenLabs',
     ],
   },
@@ -105,18 +84,16 @@ export const STACK: StackGroup[] = [
     label: 'Cloud & MLOps',
     icon: Cloud,
     items: [
-      'AWS SageMaker',
-      'Bedrock',
-      'Lambda',
       'Docker',
-      'GitHub Actions',
+      'AWS (EC2, S3, SageMaker)',
       'Weights & Biases',
-      'Observability',
+      'CI/CD',
+      'Git/GitHub',
     ],
   },
   {
     label: 'Frontend',
     icon: MonitorSmartphone,
-    items: ['React', 'Tailwind CSS', 'React Flow'],
+    items: ['React', 'Tailwind CSS'],
   },
 ];
