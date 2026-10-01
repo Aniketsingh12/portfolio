@@ -17,12 +17,15 @@ export type StackGroup = {
 };
 
 /**
- * SOURCE OF TRUTH: every item here must appear in the CORE COMPETENCIES or
- * TECHNICAL SKILLS section of `resume/resume.tex`, or be one Aniket has
- * explicitly confirmed (CrewAI, fine-tuning). Nothing gets added from project
- * docs, the legacy site, or inference — a skills list is only worth anything
- * if every pill can be defended in an interview. Update the resume first,
- * then this file.
+ * SOURCE OF TRUTH — every item here must be one of:
+ *   1. in the CORE COMPETENCIES or TECHNICAL SKILLS section of
+ *      `resume/resume.tex` (unmarked items below), or
+ *   2. actually used in one of the five projects in `projects.ts`, per that
+ *      project's own documentation (marked with a comment naming the project), or
+ *   3. explicitly confirmed by Aniket (CrewAI, fine-tuning).
+ *
+ * Deliberately excluded — Aniket does not use these: Pinecone, Bedrock,
+ * AWS Lambda, Llama. Do not re-add them from the legacy site or by inference.
  */
 export const STACK: StackGroup[] = [
   {
@@ -36,6 +39,8 @@ export const STACK: StackGroup[] = [
     items: [
       'Multi-agent orchestration',
       'ReAct tool calling',
+      'Model routing', // TaskForce — ModelRouter with per-agent fallback
+      'Human-in-the-loop', // Lumio — confidence-gated human handoff
       'MCP',
       'LangChain',
       'CrewAI',
@@ -44,12 +49,25 @@ export const STACK: StackGroup[] = [
   {
     label: 'LLM Engineering',
     icon: Brain,
-    items: ['Claude', 'GPT', 'Ollama', 'Together AI', 'Fine-tuning'],
+    items: [
+      'Claude',
+      'GPT',
+      'Ollama',
+      'Together AI',
+      'Prompt engineering', // Lumio — AI prompt generator + YAML prompt templates
+      'Structured outputs', // TaskForce — JSON output mode with extract + repair
+      'Fine-tuning',
+    ],
   },
   {
     label: 'RAG & Retrieval',
     icon: Layers,
-    items: ['ChromaDB', 'FAISS', 'Sentence Transformers'],
+    items: [
+      'Embeddings', // Lumio, Sonari — local sentence-transformer embeddings
+      'Sentence Transformers',
+      'ChromaDB',
+      'FAISS',
+    ],
   },
   {
     label: 'ML & Data Science',
@@ -75,7 +93,9 @@ export const STACK: StackGroup[] = [
       'Redis',
       'Celery',
       'WebSockets',
+      'SSE streaming', // Lumio — streaming chat over Server-Sent Events
       'Twilio',
+      'WhatsApp API', // Lumio — WhatsApp Cloud API channel
       'Whisper',
       'ElevenLabs',
     ],
@@ -86,14 +106,19 @@ export const STACK: StackGroup[] = [
     items: [
       'Docker',
       'AWS (EC2, S3, SageMaker)',
-      'Weights & Biases',
+      'GitHub Actions', // Lumio — CI (ruff, pytest, tsc, vite build)
       'CI/CD',
       'Git/GitHub',
+      'Weights & Biases',
     ],
   },
   {
     label: 'Frontend',
     icon: MonitorSmartphone,
-    items: ['React', 'Tailwind CSS'],
+    items: [
+      'React',
+      'Tailwind CSS',
+      'React Flow', // TaskForce — drag-and-drop agent graph editor
+    ],
   },
 ];
