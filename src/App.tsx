@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { MotionConfig } from 'framer-motion';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import ServicesSection from './sections/ServicesSection';
@@ -25,14 +26,18 @@ export default function App() {
   }, []);
 
   return (
-    <main className="bg-[#0C0C0C]" style={{ overflowX: 'clip' }}>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <StackSection />
-      <ExperienceSection />
-      <ContactSection />
-    </main>
+    // reducedMotion="user": when the OS asks for reduced motion, Framer skips
+    // transform animations (slides, scale) and keeps only opacity fades.
+    <MotionConfig reducedMotion="user">
+      <main className="bg-[#0C0C0C]" style={{ overflowX: 'clip' }}>
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <ProjectsSection />
+        <StackSection />
+        <ExperienceSection />
+        <ContactSection />
+      </main>
+    </MotionConfig>
   );
 }

@@ -30,7 +30,7 @@ export default function ExperienceSection() {
               borderBottom: '1px solid rgba(215, 226, 234, 0.15)',
             }}
           >
-            <p className="shrink-0 pt-1 text-xs font-light uppercase tracking-[0.2em] text-[#D7E2EA]/50 sm:w-44 sm:text-sm">
+            <p className="shrink-0 pt-1 text-xs font-light uppercase tracking-[0.2em] text-[#D7E2EA]/60 sm:w-44 sm:text-sm">
               {item.period}
             </p>
 
@@ -42,21 +42,24 @@ export default function ExperienceSection() {
                 >
                   {item.role}
                 </h3>
-                <p className="text-sm font-light uppercase tracking-wider text-[#D7E2EA]/55 sm:text-base">
-                  {item.org}
+                <p className="text-sm font-light uppercase tracking-wider text-[#D7E2EA]/60 sm:text-base">
+                  {item.org} · {item.location}
                 </p>
               </div>
 
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-3">
                 {item.points.map((point) => (
                   <li
-                    key={point}
+                    key={point.title}
                     className="flex gap-3 text-sm font-light leading-relaxed text-[#D7E2EA]/70 sm:text-base"
                   >
                     <span aria-hidden="true" className="pt-[0.55em] text-[0.5em]">
                       ●
                     </span>
-                    <span>{point}</span>
+                    <span>
+                      <span className="font-medium text-[#D7E2EA]">{point.title}:</span>{' '}
+                      {point.text}
+                    </span>
                   </li>
                 ))}
               </ul>

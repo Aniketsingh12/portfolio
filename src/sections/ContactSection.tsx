@@ -60,7 +60,7 @@ export default function ContactSection() {
         })}
       </FadeIn>
 
-      <footer className="mt-20 flex w-full max-w-6xl flex-col items-center justify-between gap-3 border-t border-[#D7E2EA]/15 pt-8 text-xs font-light uppercase tracking-[0.2em] text-[#D7E2EA]/45 sm:mt-24 sm:flex-row">
+      <footer className="mt-20 flex w-full max-w-6xl flex-col items-center justify-between gap-3 border-t border-[#D7E2EA]/15 pt-8 text-xs font-light uppercase tracking-[0.2em] text-[#D7E2EA]/60 sm:mt-24 sm:flex-row">
         <p>© {new Date().getFullYear()} Aniket Singh</p>
         <p>Built with care</p>
       </footer>

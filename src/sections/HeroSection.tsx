@@ -1,3 +1,4 @@
+import { useReducedMotion } from 'framer-motion';
 import FadeIn from '../components/FadeIn';
 import Magnet from '../components/Magnet';
 import ContactButton from '../components/ContactButton';
@@ -12,9 +13,14 @@ const NAV_LINKS = [
 ];
 
 export default function HeroSection() {
+  const reduceMotion = useReducedMotion();
+
   return (
+    // h-svh = the viewport with browser toolbars showing, so on iOS Safari the
+    // bottom row (tagline + Contact button) never sits under the toolbar.
+    // h-screen stays as the fallback for browsers without svh support.
     <section
-      className="relative flex h-screen flex-col bg-[#0C0C0C]"
+      className="relative flex h-screen h-svh flex-col bg-[#0C0C0C]"
       style={{ overflowX: 'clip' }}
     >
       <FadeIn
@@ -74,6 +80,7 @@ an ai engineer building intelligent systems from first prototype to production
         className="pointer-events-none absolute left-1/2 top-1/2 z-10 w-[210px] -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-0 sm:w-[270px] sm:translate-y-0 md:w-[330px] lg:w-[380px]"
       >
         <Magnet
+          disabled={!!reduceMotion}
           padding={150}
           strength={3}
           activeTransition="transform 0.3s ease-out"
